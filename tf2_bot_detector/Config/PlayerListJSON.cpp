@@ -30,6 +30,7 @@ namespace tf2_bot_detector
 		case PlayerAttribute::Suspicious:  j = "suspicious"; break;
 		case PlayerAttribute::Exploiter:   j = "exploiter"; break;
 		case PlayerAttribute::Racist:      j = "racist"; break;
+		case PlayerAttribute::Ignore:      j = "ignore"; break;
 
 		default:
 			throw std::runtime_error("Unknown PlayerAttribute value "s << +std::underlying_type_t<PlayerAttribute>(d));
@@ -83,6 +84,8 @@ namespace tf2_bot_detector
 			d = PlayerAttribute::Exploiter;
 		else if (str == "racist"sv)
 			d = PlayerAttribute::Racist;
+		else if (str == "ignore"sv)
+			d = PlayerAttribute::Ignore;
 		else
 			throw std::runtime_error("Unknown player attribute type "s << std::quoted(str));
 	}
