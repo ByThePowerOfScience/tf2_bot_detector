@@ -23,6 +23,7 @@ namespace tf2_bot_detector
 		Suspicious,
 		Exploiter,
 		Racist,
+		Exclude,
 
 		COUNT,
 	};
